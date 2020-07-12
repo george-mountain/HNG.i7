@@ -1,0 +1,14 @@
+nk = input().split()
+n = int(nk[0])
+k = int(nk[1])
+arr = list(map(int, input().rstrip().split()))
+d = {}
+answer = 0
+
+for i in arr:
+    d[i] = i
+for j in arr:
+    g = j + k
+    if g in d:
+        answer +=1
+print(answer)
