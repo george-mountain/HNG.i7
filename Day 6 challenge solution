@@ -1,0 +1,12 @@
+T = int(input())
+for x in range(T):
+    
+    S = input()
+    val1 = ""
+    val2 = ""
+    for i in range(len(S)):
+        if(i % 2 == 0):
+            val1 = val1 + S[i]
+        else:
+            val2 = val2 + S[i]
+    print(val1, val2)
