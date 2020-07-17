@@ -1,0 +1,9 @@
+from itertools import groupby
+n = bin(int(input()))
+maximum_length = 0
+groups = groupby(n)
+for group in groups:
+    group_length = len(list(group[1]))
+    if(group[0]=="1" and group_length > maximum_length):
+        maximum_length = group_length
+print(maximum_length)
