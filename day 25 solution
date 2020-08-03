@@ -1,0 +1,19 @@
+import math
+def primeNumber(n):
+    if n < 1:
+        return False
+    square_root_n = math.sqrt(n)
+    if square_root_n.is_integer():
+        return False
+    for i in range(2,int(square_root_n) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+num_test = int(input())
+for i in range(num_test):
+    num = int(input())
+    if primeNumber(num):
+        print("Prime")
+    else:
+        print("Not prime")
