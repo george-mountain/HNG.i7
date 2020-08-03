@@ -1,0 +1,18 @@
+r_day,r_month,r_year = [int(e) for e in input().strip().split(" ")]
+day,month,year = [int(e) for e in input().strip().split(" ")]
+if r_year < year:
+    print(0)
+elif r_year == year:
+    #check month
+    if r_month < month:
+        print(0)
+    elif r_month == month:
+        #check day
+        if r_day <= day:
+            print(0)
+        else:
+            print(15 * (r_day - day))
+    else:
+        print(500 * (r_month - month))
+else:
+    print(10000)
